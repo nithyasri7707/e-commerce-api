@@ -5,6 +5,7 @@ import com.example.E_commerce_api.model.dto.request.LoginRequest;
 import com.example.E_commerce_api.model.dto.request.RegisterRequest;
 import com.example.E_commerce_api.model.dto.response.AuthResponse;
 import com.example.E_commerce_api.service.inf.IAuthService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -14,9 +15,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/auth")
+@Tag(name="Auth", description = "APIs for adding, updating and removing products from cart.")
 public class AuthController {
 
     private final IAuthService authService;
