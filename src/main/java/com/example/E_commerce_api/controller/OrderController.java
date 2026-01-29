@@ -17,6 +17,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/order")
+@Tag(name="Order", description = "APIs for adding, updating and removing product grom cart.")
 
 public class OrderController {
 
