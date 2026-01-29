@@ -3,6 +3,7 @@ package com.example.E_commerce_api.controller;
 import com.example.E_commerce_api.model.dto.request.ProductRequest;
 import com.example.E_commerce_api.model.dto.response.ProductResponse;
 import com.example.E_commerce_api.service.inf.IProductService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -17,6 +18,7 @@ import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/product")
+@Tag(name="product", description = "APIs for adding, updating and removing product from product.")
 public class ProductController {
 
     private final IProductService productService;
