@@ -44,4 +44,8 @@ public class OrderController {
         OrderResponse order = orderService.updateOrderStatus(request);
         return ResponseEntity.ok(order);
     }
+    @GetMapping("/dummy")
+        public String dummy(){
+        return "Hi";
+    }
 }
