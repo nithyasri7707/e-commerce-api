@@ -5,6 +5,7 @@ import com.example.E_commerce_api.model.dto.request.OrderRequest;
 import com.example.E_commerce_api.model.dto.request.updateOrderStatusRequest;
 import com.example.E_commerce_api.model.dto.response.OrderResponse;
 import com.example.E_commerce_api.service.inf.IOrderService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -16,6 +17,8 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/order")
+@Tag(name="Order", description = "APIs for adding, updating and removing product grom cart.")
+
 public class OrderController {
 
     private final IOrderService orderService;
@@ -41,4 +44,14 @@ public class OrderController {
         OrderResponse order = orderService.updateOrderStatus(request);
         return ResponseEntity.ok(order);
     }
+    @GetMapping("/dummy")
+        public String dummy(){
+        return "Hi";
+    }
+
+    @GetMapping("/dummy Hello")
+    public String dummyHello(){
+        return "Hi hello";
+    }
 }
+
